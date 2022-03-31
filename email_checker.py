@@ -1,5 +1,5 @@
 def main():
-    email = "fattiger@2022yahoo.com"
+    email = "fattiger.2022@yahoo.com"
     if valid_email(email):
         print("Valid email")
     else:
@@ -7,8 +7,8 @@ def main():
 
 
 def valid_email(email):
-    """Check email format has @ and ."""
-    return "@" in email and "." in email
+    """Check email format has @ and . in this order"""
+    return email.find("@") < email.rfind(".")
 
 
 if __name__ == '__main__':
